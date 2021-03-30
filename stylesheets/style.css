@@ -1,0 +1,251 @@
+/* ========== MAIN Components ========== */
+
+body {
+  color: #fff;
+  background-color: #282b30;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== NAVBAR ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.navbar nav {
+  position: relative;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  padding: 7px 15px;
+  background: #1e2124;
+  z-index: 1;
+  text-align: right;
+}
+
+.navbar li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+@media (max-width:500px) {
+.navbar li {
+  display: block;
+  list-style-type: none;
+}
+}
+
+.logo {
+  padding: 0px 5px;
+  float: left;
+  text-align: center;
+}
+
+.logo p {
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0px 5px;
+  font-size: 15px;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 7px 25px;
+  font-size: 15px;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar a:hover {
+  color: #999;
+}
+
+/* ========== PROJECTS PAGE BOXES ========== */
+
+.box {
+  float:left;
+  width: 280px;
+  height: 560px;
+  background-color: #ffffff;
+  display:block;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.box:hover{
+  width: 290px;
+  height: 570px;
+  margin: 5px 5px 5px 5px;
+}
+
+.box:hover .text-box {
+  font-size: 17px;
+}
+
+.icon {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: 25px;
+}
+
+.text-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 85px;
+  width: 25px;
+  display: none;
+}
+
+.icon:hover+.text-icon {
+  display: block;
+}
+
+.icon:hover {
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+
+@media (min-width:1250px) { 
+.boxsides {
+  float:left;
+  width: calc(calc(100% - 1200px) / 2);
+  height: 580px;
+}
+}
+
+@media (max-width:1250px) and (min-width:950px) { 
+.boxsides {
+  float:left;
+  width: calc(calc(100% - 900px) / 2);
+  height: 581px;
+}
+}
+
+@media (max-width:950px) and (min-width:650px) { 
+.boxsides {
+  float:left;
+  width: calc(calc(100% - 600px) / 2);
+  height: 581px;
+}
+}
+
+@media (max-width:650px) { 
+.boxsides {
+  float:left;
+  width: calc(calc(100% - 300px) / 2);
+  height: 2321px;
+}
+}
+
+
+
+/* ========== COLUMNS ========== */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding:25px 0px;
+}
+
+.rown:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* -------- */
+
+.sides {
+  float:left;
+  padding:10px 10px;
+  width:12.49999%;
+  text-align: center;
+}
+.quarter {
+  float:left;
+  padding:10px 10px;
+  width:24.99999%;
+  text-align: center;
+}
+.half {
+  float:left;
+  padding:10px 10px;
+  width:49.99999%; 
+  text-align: center;
+}
+.one-thirds {
+  float:left;
+  padding:10px 10px;
+  width:33.33333%;
+  text-align: center;
+}
+.two-thirds {
+  float:left;
+  padding:10px 10px;
+  width:66.66666%;
+  text-align: center;
+}
+.full {
+  text-align: center;
+  width:100%
+}
+
+/* -------- */
+
+@media (max-width:1080px) {
+
+.sides {
+  float:left;
+  padding:5px 50px;
+  width:100%%;
+  text-align: center;
+}
+.quarter {
+  float:left;
+  padding:5px 50px;
+  width:100%;
+  text-align: center;
+}
+.half {
+  float:left;
+  padding:5px 50px;
+  width:100%;
+  text-align: center;
+}
+.one-thirds {
+  float:left;
+  padding:5px 50px;
+  width:100%;
+  text-align: center;
+}
+.two-thirds {
+  float:left;
+  padding:5px 50px;
+  width:100%;
+  text-align: center;
+}
+.full {
+  text-align: center;
+  width:100%
+}
+
+}
+

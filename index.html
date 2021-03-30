@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Porfolio - Max</title>
+<meta name="description" content="Max's personnal website">
+<meta name="keywords" content="max, project">
+<link rel='icon' href='images/pfp.jpg' type='image/x-icon'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='stylesheets/style.css'/>
+
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
+
+<style>
+body{
+  font-family: Mont, sans-serif;
+  letter-spacing: 1px;
+} 
+</style>
+</head>
+<body>
+
+
+
+<div id="top" style="text-align:center;">
+  <h1 class="ml3" style="font-size:50px; font-weight: bold;">Max's porfolio</h1>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+<script>
+window.onload = function() {
+  var h = (window.innerHeight - 58) / 2  + "px 0px";
+  document.getElementById("top").style.padding = h;
+}
+
+window.onresize = function() {
+  var h = (window.innerHeight - 58) / 2  + "px 0px";
+  document.getElementById("top").style.padding = h;
+}
+
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+setTimeout(
+  function(){ 
+    window.scrollTo({top: 1000,behavior: 'smooth',});
+  }, 2000);
+
+anime.timeline()
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 1250,
+    delay: (el, i) => 100 * (i+1)
+  });
+</script>
+
+<h1 style="text-align: center; padding: 10px;">Projets récent</h1>
+
+<div id="projects" class="row" style="padding-bottom: 20px; position: relative;">
+
+  <div class="boxsides"><br style="line-height: 0px"></div>
+    <button onclick="window.scrollTo({top: 0,behavior: 'smooth',});" style="border-width: 0; background: transparent;">
+    <div class="box">
+      <img src="images/horairebot.jpg" style="width:100%; border-radius: 8px 8px 0px 0px;">
+      <div style="padding: 20px 20px; color: black;">
+        <h2 style="text-align: center; padding-bottom: 10px;">HoraireBot</h2>
+        <p class="text-box" style="text-align: justify">HoraireBot était un bot sur discord qui, chaque jour à 7 heure du matin, affichait l’horaire pour la journée avec les liens zooms pour chaque classe. Actif du 28 Janvier jusqu'au 26 Mars.</p>
+        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="icon" style="left: 20px" />
+        <p class="text-icon">JavaScript</p>
+        <img src="https://img.icons8.com/color/48/000000/discord-logo.png" alt="Discord.js" class="icon" style="left: 50px" />
+        <p class="text-icon">Discord.js</p>
+      </div>
+    </div>
+    </button>
+
+    <div class="box">
+      <img src="images/fitbit.jpg" style="width:100%; border-radius: 10px 10px 0px 0px;">
+      <div style="padding: 20px 20px; color: black;">
+        <h2 style="text-align: center; padding-bottom: 10px;">FitBit app</h2>
+        <p class="text-box" style="text-align: justify">L'application privé pour montres fitbit que j'ai creéer me permet de voir mon horaire d'école en tout temps.</p>
+        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="icon" style="left: 20px" />
+        <p class="text-icon">JavaScript</p>
+        <img src="https://img.icons8.com/color/48/000000/fitbit.png" alt="Fitbit API" class="icon" style="left: 50px" />
+        <p class="text-icon">Fitbit.gui</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="images/website.jpg" style="width:100%; border-radius: 10px 10px 0px 0px;">
+      <div style="padding: 20px 20px; color: black;">
+        <h2 style="text-align: center; padding-bottom: 10px;">Site Web</h2>
+        <p class="text-box" style="text-align: justify">J'ai créé ce site web pour pouvoir démontrer mes projets personnels au lieu de les mettre sur le drive.</p>
+        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="icon" style="left: 20px" />
+        <p class="text-icon">HTML5</p>
+        <img src="https://img.icons8.com/color/48/000000/css-filetype.png" alt="CSS" class="icon" style="left: 50px" />
+        <p class="text-icon">CSS</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="images/pfp.jpg" style="width:100%; border-radius: 10px 10px 0px 0px;">
+      <div style="padding: 20px 20px; color: black;">
+        <h2 style="text-align: center; padding-bottom: 10px;">Autres</h2>
+        <p class="text-box" style="text-align: justify">J'ai aussi creéer plusieurs autres projets dont je ne parle pas ici puisqu'ils n'ont pas vraiment rapport avec l'école.</p>
+        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="icon" style="left: 20px" />
+        <p class="text-icon">Python</p>
+        <img src="https://img.icons8.com/color/48/000000/php.png" alt="PHP" class="icon" style="left: 50px" />
+        <p class="text-icon">PHP</p>
+      </div>
+    </div>
+</div>
+
+<div id="examples" class="row" style="padding-bottom: 20px; position: relative;">
+</div>
+
+<!-- <p class="full" style="font-size: 12px; padding: 1%; color: #666;">&copy 2021 Max</p> -->
+
+
+</body>
+</html>
